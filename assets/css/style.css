@@ -401,10 +401,16 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 12px); }
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
   scrollbar-width: none;
   padding-bottom: 10px;
 }
+.gallery-track { scroll-snap-type: x mandatory; }
+.reviews-track {
+  scroll-snap-type: none;
+  overscroll-behavior-inline: contain;
+  cursor: grab;
+}
+.reviews-track:active { cursor: grabbing; }
 .gallery-track::-webkit-scrollbar, .reviews-track::-webkit-scrollbar { display: none; }
 .gallery-item {
   flex: 0 0 84%;

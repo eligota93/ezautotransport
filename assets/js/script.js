@@ -97,8 +97,65 @@
   document.querySelector("[data-gallery-next]")?.addEventListener("click", () => scrollTrack(galleryTrack, 1));
 
   const reviewsTrack = document.getElementById("reviews-track");
-  document.querySelector("[data-review-prev]")?.addEventListener("click", () => scrollTrack(reviewsTrack, -1));
-  document.querySelector("[data-review-next]")?.addEventListener("click", () => scrollTrack(reviewsTrack, 1));
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let reviewsPaused = false;
+  let reviewsResumeTimer = 0;
+
+  const pauseReviewsTemporarily = (delay = 2200) => {
+    reviewsPaused = true;
+    window.clearTimeout(reviewsResumeTimer);
+    reviewsResumeTimer = window.setTimeout(() => {
+      reviewsPaused = false;
+    }, delay);
+  };
+
+  if (reviewsTrack) {
+    // Duplicate the cards to create a seamless, continuously moving loop.
+    [...reviewsTrack.children].forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      reviewsTrack.appendChild(clone);
+    });
+
+    if (!reduceMotion) {
+      let previousTime = performance.now();
+      const speed = 28; // pixels per second
+
+      const moveReviews = currentTime => {
+        const elapsed = Math.min(currentTime - previousTime, 50);
+        previousTime = currentTime;
+
+        if (!reviewsPaused && reviewsTrack.scrollWidth > reviewsTrack.clientWidth) {
+          reviewsTrack.scrollLeft += (speed * elapsed) / 1000;
+          const loopPoint = reviewsTrack.scrollWidth / 2;
+          if (reviewsTrack.scrollLeft >= loopPoint) {
+            reviewsTrack.scrollLeft -= loopPoint;
+          }
+        }
+        window.requestAnimationFrame(moveReviews);
+      };
+
+      window.requestAnimationFrame(moveReviews);
+    }
+
+    reviewsTrack.addEventListener("mouseenter", () => { reviewsPaused = true; });
+    reviewsTrack.addEventListener("mouseleave", () => { reviewsPaused = false; });
+    reviewsTrack.addEventListener("focusin", () => { reviewsPaused = true; });
+    reviewsTrack.addEventListener("focusout", () => { reviewsPaused = false; });
+    reviewsTrack.addEventListener("pointerdown", () => { reviewsPaused = true; });
+    reviewsTrack.addEventListener("pointerup", () => pauseReviewsTemporarily());
+    reviewsTrack.addEventListener("touchend", () => pauseReviewsTemporarily(), { passive: true });
+    reviewsTrack.addEventListener("wheel", () => pauseReviewsTemporarily(), { passive: true });
+  }
+
+  document.querySelector("[data-review-prev]")?.addEventListener("click", () => {
+    pauseReviewsTemporarily();
+    scrollTrack(reviewsTrack, -1);
+  });
+  document.querySelector("[data-review-next]")?.addEventListener("click", () => {
+    pauseReviewsTemporarily();
+    scrollTrack(reviewsTrack, 1);
+  });
 
   const lightbox = document.getElementById("lightbox");
   const lightboxImage = lightbox?.querySelector("img");
