@@ -94,7 +94,7 @@
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const setupInfiniteScroller = (track, { speed = 26, pauseDelay = 2500 } = {}) => {
+  const setupInfiniteScroller = (track, { speed = 26, pauseDelay = 2500, direction = 1 } = {}) => {
     if (!track) return { pauseTemporarily: () => {} };
 
     const originals = [...track.children];
@@ -115,6 +115,11 @@
       resumeTimer = window.setTimeout(() => { paused = false; }, delay);
     };
 
+    const setStartingPosition = () => {
+      if (direction < 0) track.scrollLeft = track.scrollWidth / 2;
+    };
+    window.requestAnimationFrame(setStartingPosition);
+
     if (!reduceMotion) {
       let previousTime = performance.now();
       const animate = currentTime => {
@@ -122,9 +127,14 @@
         previousTime = currentTime;
 
         if (!paused && track.scrollWidth > track.clientWidth) {
-          track.scrollLeft += (speed * elapsed) / 1000;
           const loopPoint = track.scrollWidth / 2;
-          if (track.scrollLeft >= loopPoint) track.scrollLeft -= loopPoint;
+          track.scrollLeft += direction * (speed * elapsed) / 1000;
+
+          if (direction > 0 && track.scrollLeft >= loopPoint) {
+            track.scrollLeft -= loopPoint;
+          } else if (direction < 0 && track.scrollLeft <= 0) {
+            track.scrollLeft += loopPoint;
+          }
         }
 
         window.requestAnimationFrame(animate);
@@ -145,7 +155,7 @@
   };
 
   const galleryTrack = document.getElementById("gallery-track");
-  const galleryControls = setupInfiniteScroller(galleryTrack, { speed: 24, pauseDelay: 2600 });
+  const galleryControls = setupInfiniteScroller(galleryTrack, { speed: 24, pauseDelay: 2600, direction: 1 });
 
   document.querySelector("[data-gallery-prev]")?.addEventListener("click", () => {
     galleryControls.pauseTemporarily();
@@ -157,7 +167,7 @@
   });
 
   const reviewsTrack = document.getElementById("reviews-track");
-  const reviewControls = setupInfiniteScroller(reviewsTrack, { speed: 28, pauseDelay: 2200 });
+  const reviewControls = setupInfiniteScroller(reviewsTrack, { speed: 28, pauseDelay: 2200, direction: -1 });
 
   document.querySelector("[data-review-prev]")?.addEventListener("click", () => {
     reviewControls.pauseTemporarily();
