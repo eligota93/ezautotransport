@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260714-3">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -353,32 +353,54 @@
             <p class="eyebrow">Galeria</p>
             <h2>Transportet tona</h2>
           </div>
-          <div class="slider-controls">
-            <button type="button" class="slider-button" data-gallery-prev aria-label="Fotografia e mëparshme">←</button>
-            <button type="button" class="slider-button" data-gallery-next aria-label="Fotografia tjetër">→</button>
-          </div>
         </div>
-        <div class="gallery-track" id="gallery-track">
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-01.webp"><img src="assets/images/galeri-01.webp" alt="Lamborghini e verdhë dhe Ferrari e kuqe në transport" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-02.webp"><img src="assets/images/galeri-02.webp" alt="Porsche në transportues me vetura të tjera luksoze" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-03.webp"><img src="assets/images/galeri-03.webp" alt="Lamborghini e bardhë në transportues me vetura premium" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-04.webp"><img src="assets/images/galeri-04.webp" alt="Ferrari e kuqe matte në transportues" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-05.webp"><img src="assets/images/galeri-05.webp" alt="Ferrari e kuqe në afërsi gjatë transportit" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-06.webp"><img src="assets/images/galeri-06.webp" alt="Lamborghini e bardhë dhe veturë e artë në transportues" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-07.webp"><img src="assets/images/galeri-07.webp" alt="Mercedes G-Class dhe Porsche në transportues" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-08.webp"><img src="assets/images/galeri-08.webp" alt="Ferrari dhe Porsche në trailer të gjelbër" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-09.webp"><img src="assets/images/galeri-09.webp" alt="Superveturë e bardhë në transportues" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-10.webp"><img src="assets/images/galeri-10.webp" alt="Lamborghini e bardhë me shirita portokalli në rrugë" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-11.webp"><img src="assets/images/galeri-11.webp" alt="Lamborghini blu në transportues" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-12.webp"><img src="assets/images/galeri-12.webp" alt="Kamion transporti me Rolls-Royce në trailer" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-13.webp"><img src="assets/images/galeri-13.webp" alt="Mercedes SLS AMG i zi në transportues" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-14.webp"><img src="assets/images/galeri-14.webp" alt="Lamborghini e verdhë dhe Mercedes G-Class në transport" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-15.webp"><img src="assets/images/galeri-15.webp" alt="Lamborghini e verdhë me dyer të hapura në trailer" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-16.webp"><img src="assets/images/galeri-16.webp" alt="Ferrari e kuqe në transportues nga afër" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-17.webp"><img src="assets/images/galeri-17.webp" alt="Audi R8 dhe Mercedes G-Class në trailer" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-18.webp"><img src="assets/images/galeri-18.webp" alt="Superveturë e bardhë përpara tabelës Alberti" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-19.webp"><img src="assets/images/galeri-19.webp" alt="Audi R8 e verdhë në rrugë me transportues" loading="lazy"></button>
-          <button class="gallery-item" type="button" data-full="assets/images/galeri-20.webp"><img src="assets/images/galeri-20.webp" alt="Lamborghini e verdhë dhe Ferrari e kuqe në transportues" loading="lazy"></button>
+        <div class="marquee-viewport gallery-marquee" aria-label="Galeria lëvizëse e transporteve">
+          <div class="gallery-track marquee-track" id="gallery-track">
+            <div class="marquee-group">
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-01.webp"><img src="assets/images/galeri-01.webp" alt="Lamborghini e verdhë dhe Ferrari e kuqe në transport" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-02.webp"><img src="assets/images/galeri-02.webp" alt="Porsche në transportues me vetura të tjera luksoze" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-03.webp"><img src="assets/images/galeri-03.webp" alt="Lamborghini e bardhë në transportues me vetura premium" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-04.webp"><img src="assets/images/galeri-04.webp" alt="Ferrari e kuqe matte në transportues" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-05.webp"><img src="assets/images/galeri-05.webp" alt="Ferrari e kuqe në afërsi gjatë transportit" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-06.webp"><img src="assets/images/galeri-06.webp" alt="Lamborghini e bardhë dhe veturë e artë në transportues" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-07.webp"><img src="assets/images/galeri-07.webp" alt="Mercedes G-Class dhe Porsche në transportues" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-08.webp"><img src="assets/images/galeri-08.webp" alt="Ferrari dhe Porsche në trailer të gjelbër" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-09.webp"><img src="assets/images/galeri-09.webp" alt="Superveturë e bardhë në transportues" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-10.webp"><img src="assets/images/galeri-10.webp" alt="Lamborghini e bardhë me shirita portokalli në rrugë" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-11.webp"><img src="assets/images/galeri-11.webp" alt="Lamborghini blu në transportues" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-12.webp"><img src="assets/images/galeri-12.webp" alt="Kamion transporti me Rolls-Royce në trailer" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-13.webp"><img src="assets/images/galeri-13.webp" alt="Mercedes SLS AMG i zi në transportues" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-14.webp"><img src="assets/images/galeri-14.webp" alt="Lamborghini e verdhë dhe Mercedes G-Class në transport" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-15.webp"><img src="assets/images/galeri-15.webp" alt="Lamborghini e verdhë me dyer të hapura në trailer" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-16.webp"><img src="assets/images/galeri-16.webp" alt="Ferrari e kuqe në transportues nga afër" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-17.webp"><img src="assets/images/galeri-17.webp" alt="Audi R8 dhe Mercedes G-Class në trailer" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-18.webp"><img src="assets/images/galeri-18.webp" alt="Superveturë e bardhë përpara tabelës Alberti" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-19.webp"><img src="assets/images/galeri-19.webp" alt="Audi R8 e verdhë në rrugë me transportues" loading="lazy"></button>
+            <button class="gallery-item" type="button" data-full="assets/images/galeri-20.webp"><img src="assets/images/galeri-20.webp" alt="Lamborghini e verdhë dhe Ferrari e kuqe në transportues" loading="lazy"></button>
+            </div>
+            <div class="marquee-group" aria-hidden="true">
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-01.webp"><img src="assets/images/galeri-01.webp" alt="Lamborghini e verdhë dhe Ferrari e kuqe në transport" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-02.webp"><img src="assets/images/galeri-02.webp" alt="Porsche në transportues me vetura të tjera luksoze" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-03.webp"><img src="assets/images/galeri-03.webp" alt="Lamborghini e bardhë në transportues me vetura premium" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-04.webp"><img src="assets/images/galeri-04.webp" alt="Ferrari e kuqe matte në transportues" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-05.webp"><img src="assets/images/galeri-05.webp" alt="Ferrari e kuqe në afërsi gjatë transportit" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-06.webp"><img src="assets/images/galeri-06.webp" alt="Lamborghini e bardhë dhe veturë e artë në transportues" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-07.webp"><img src="assets/images/galeri-07.webp" alt="Mercedes G-Class dhe Porsche në transportues" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-08.webp"><img src="assets/images/galeri-08.webp" alt="Ferrari dhe Porsche në trailer të gjelbër" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-09.webp"><img src="assets/images/galeri-09.webp" alt="Superveturë e bardhë në transportues" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-10.webp"><img src="assets/images/galeri-10.webp" alt="Lamborghini e bardhë me shirita portokalli në rrugë" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-11.webp"><img src="assets/images/galeri-11.webp" alt="Lamborghini blu në transportues" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-12.webp"><img src="assets/images/galeri-12.webp" alt="Kamion transporti me Rolls-Royce në trailer" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-13.webp"><img src="assets/images/galeri-13.webp" alt="Mercedes SLS AMG i zi në transportues" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-14.webp"><img src="assets/images/galeri-14.webp" alt="Lamborghini e verdhë dhe Mercedes G-Class në transport" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-15.webp"><img src="assets/images/galeri-15.webp" alt="Lamborghini e verdhë me dyer të hapura në trailer" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-16.webp"><img src="assets/images/galeri-16.webp" alt="Ferrari e kuqe në transportues nga afër" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-17.webp"><img src="assets/images/galeri-17.webp" alt="Audi R8 dhe Mercedes G-Class në trailer" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-18.webp"><img src="assets/images/galeri-18.webp" alt="Superveturë e bardhë përpara tabelës Alberti" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-19.webp"><img src="assets/images/galeri-19.webp" alt="Audi R8 e verdhë në rrugë me transportues" loading="lazy"></button>
+            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-20.webp"><img src="assets/images/galeri-20.webp" alt="Lamborghini e verdhë dhe Ferrari e kuqe në transportues" loading="lazy"></button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -391,15 +413,20 @@
             <h2>Çfarë thonë klientët</h2>
             <p>Shembuj që mund të zëvendësohen me vlerësime reale.</p>
           </div>
-          <div class="slider-controls">
-            <button type="button" class="slider-button light-control" data-review-prev aria-label="Vlerësimi i mëparshëm">←</button>
-            <button type="button" class="slider-button light-control" data-review-next aria-label="Vlerësimi tjetër">→</button>
-          </div>
         </div>
-        <div class="reviews-track" id="reviews-track">
-          <article class="review-card"><div class="review-top"><span class="initials">AK</span><div><h3>Klient individual</h3><p>Gjermani–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5">★★★★★</div><p>Komunikim i mirë gjatë gjithë procesit dhe dorëzim sipas marrëveshjes.</p><span class="sample-label">Shembull</span></article>
-          <article class="review-card"><div class="review-top"><span class="initials">BM</span><div><h3>Klient individual</h3><p>Austri–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5">★★★★★</div><p>Proces i qartë nga rezervimi deri te dorëzimi i veturës.</p><span class="sample-label">Shembull</span></article>
-          <article class="review-card"><div class="review-top"><span class="initials">DT</span><div><h3>Autosallon</h3><p>Belgjikë–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5">★★★★★</div><p>Koordinim korrekt për transportin e disa veturave njëkohësisht.</p><span class="sample-label">Shembull</span></article>
+        <div class="marquee-viewport reviews-marquee" aria-label="Vlerësimet lëvizëse të klientëve">
+          <div class="reviews-track marquee-track" id="reviews-track">
+            <div class="marquee-group">
+            <article class="review-card"><div class="review-top"><span class="initials">AK</span><div><h3>Klient individual</h3><p>Gjermani–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5">★★★★★</div><p>Komunikim i mirë gjatë gjithë procesit dhe dorëzim sipas marrëveshjes.</p><span class="sample-label">Shembull</span></article>
+            <article class="review-card"><div class="review-top"><span class="initials">BM</span><div><h3>Klient individual</h3><p>Austri–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5">★★★★★</div><p>Proces i qartë nga rezervimi deri te dorëzimi i veturës.</p><span class="sample-label">Shembull</span></article>
+            <article class="review-card"><div class="review-top"><span class="initials">DT</span><div><h3>Autosallon</h3><p>Belgjikë–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5">★★★★★</div><p>Koordinim korrekt për transportin e disa veturave njëkohësisht.</p><span class="sample-label">Shembull</span></article>
+            </div>
+            <div class="marquee-group" aria-hidden="true">
+            <article class="review-card" aria-hidden="true"><div class="review-top"><span class="initials">AK</span><div><h3>Klient individual</h3><p>Gjermani–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5">★★★★★</div><p>Komunikim i mirë gjatë gjithë procesit dhe dorëzim sipas marrëveshjes.</p><span class="sample-label">Shembull</span></article>
+            <article class="review-card" aria-hidden="true"><div class="review-top"><span class="initials">BM</span><div><h3>Klient individual</h3><p>Austri–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5">★★★★★</div><p>Proces i qartë nga rezervimi deri te dorëzimi i veturës.</p><span class="sample-label">Shembull</span></article>
+            <article class="review-card" aria-hidden="true"><div class="review-top"><span class="initials">DT</span><div><h3>Autosallon</h3><p>Belgjikë–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5">★★★★★</div><p>Koordinim korrekt për transportin e disa veturave njëkohësisht.</p><span class="sample-label">Shembull</span></article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -487,6 +514,6 @@
     <img src="" alt="">
   </div>
 
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js?v=20260714-3"></script>
 </body>
 </html>

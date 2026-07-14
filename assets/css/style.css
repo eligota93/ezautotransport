@@ -797,7 +797,6 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 12px); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
 
 
@@ -850,4 +849,87 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 12px); }
   .service-card { min-height: 188px; padding: 24px; }
   .service-card h3 { font-size: 19px; }
   .service-card p { font-size: 13px; }
+}
+
+
+/* Reliable automatic infinite marquees */
+.marquee-viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.marquee-viewport::before,
+.marquee-viewport::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  width: 30px;
+  pointer-events: none;
+}
+.gallery-marquee::before,
+.gallery-marquee::after { background: linear-gradient(90deg, var(--dark), transparent); }
+.gallery-marquee::after { right: 0; transform: rotate(180deg); }
+.gallery-marquee::before { left: 0; }
+.reviews-marquee::before,
+.reviews-marquee::after { background: linear-gradient(90deg, var(--white), transparent); }
+.reviews-marquee::after { right: 0; transform: rotate(180deg); }
+.reviews-marquee::before { left: 0; }
+
+.gallery-track,
+.reviews-track,
+.marquee-track {
+  display: flex;
+  width: max-content;
+  max-width: none;
+  gap: 0;
+  overflow: visible;
+  padding: 0;
+  scroll-snap-type: none;
+  scrollbar-width: none;
+  will-change: transform;
+  cursor: default;
+  mask-image: none;
+}
+.marquee-group {
+  display: flex;
+  flex: none;
+  gap: 16px;
+  padding-right: 16px;
+}
+.gallery-track {
+  animation: galleryMoveLeft 82s linear infinite;
+}
+.reviews-track {
+  animation: reviewsMoveRight 24s linear infinite;
+}
+.marquee-viewport:hover .marquee-track,
+.marquee-viewport:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes galleryMoveLeft {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+@keyframes reviewsMoveRight {
+  from { transform: translate3d(-50%, 0, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+.marquee-group .gallery-item {
+  flex: none;
+  width: min(78vw, 340px);
+  aspect-ratio: 4 / 5;
+}
+.marquee-group .review-card {
+  flex: none;
+  width: min(84vw, 380px);
+}
+@media (min-width: 768px) {
+  .marquee-viewport::before,
+  .marquee-viewport::after { width: 55px; }
+  .marquee-group .gallery-item { width: 340px; }
+  .marquee-group .review-card { width: 380px; }
 }
