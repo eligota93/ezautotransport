@@ -92,68 +92,79 @@
     track.scrollBy({ left: direction * track.clientWidth * 0.82, behavior: "smooth" });
   };
 
-  const galleryTrack = document.getElementById("gallery-track");
-  document.querySelector("[data-gallery-prev]")?.addEventListener("click", () => scrollTrack(galleryTrack, -1));
-  document.querySelector("[data-gallery-next]")?.addEventListener("click", () => scrollTrack(galleryTrack, 1));
-
-  const reviewsTrack = document.getElementById("reviews-track");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let reviewsPaused = false;
-  let reviewsResumeTimer = 0;
 
-  const pauseReviewsTemporarily = (delay = 2200) => {
-    reviewsPaused = true;
-    window.clearTimeout(reviewsResumeTimer);
-    reviewsResumeTimer = window.setTimeout(() => {
-      reviewsPaused = false;
-    }, delay);
-  };
+  const setupInfiniteScroller = (track, { speed = 26, pauseDelay = 2500 } = {}) => {
+    if (!track) return { pauseTemporarily: () => {} };
 
-  if (reviewsTrack) {
-    // Duplicate the cards to create a seamless, continuously moving loop.
-    [...reviewsTrack.children].forEach(card => {
-      const clone = card.cloneNode(true);
+    const originals = [...track.children];
+    if (originals.length === 0) return { pauseTemporarily: () => {} };
+
+    originals.forEach(item => {
+      const clone = item.cloneNode(true);
       clone.setAttribute("aria-hidden", "true");
-      reviewsTrack.appendChild(clone);
+      track.appendChild(clone);
     });
+
+    let paused = false;
+    let resumeTimer = 0;
+
+    const pauseTemporarily = (delay = pauseDelay) => {
+      paused = true;
+      window.clearTimeout(resumeTimer);
+      resumeTimer = window.setTimeout(() => { paused = false; }, delay);
+    };
 
     if (!reduceMotion) {
       let previousTime = performance.now();
-      const speed = 28; // pixels per second
-
-      const moveReviews = currentTime => {
+      const animate = currentTime => {
         const elapsed = Math.min(currentTime - previousTime, 50);
         previousTime = currentTime;
 
-        if (!reviewsPaused && reviewsTrack.scrollWidth > reviewsTrack.clientWidth) {
-          reviewsTrack.scrollLeft += (speed * elapsed) / 1000;
-          const loopPoint = reviewsTrack.scrollWidth / 2;
-          if (reviewsTrack.scrollLeft >= loopPoint) {
-            reviewsTrack.scrollLeft -= loopPoint;
-          }
+        if (!paused && track.scrollWidth > track.clientWidth) {
+          track.scrollLeft += (speed * elapsed) / 1000;
+          const loopPoint = track.scrollWidth / 2;
+          if (track.scrollLeft >= loopPoint) track.scrollLeft -= loopPoint;
         }
-        window.requestAnimationFrame(moveReviews);
-      };
 
-      window.requestAnimationFrame(moveReviews);
+        window.requestAnimationFrame(animate);
+      };
+      window.requestAnimationFrame(animate);
     }
 
-    reviewsTrack.addEventListener("mouseenter", () => { reviewsPaused = true; });
-    reviewsTrack.addEventListener("mouseleave", () => { reviewsPaused = false; });
-    reviewsTrack.addEventListener("focusin", () => { reviewsPaused = true; });
-    reviewsTrack.addEventListener("focusout", () => { reviewsPaused = false; });
-    reviewsTrack.addEventListener("pointerdown", () => { reviewsPaused = true; });
-    reviewsTrack.addEventListener("pointerup", () => pauseReviewsTemporarily());
-    reviewsTrack.addEventListener("touchend", () => pauseReviewsTemporarily(), { passive: true });
-    reviewsTrack.addEventListener("wheel", () => pauseReviewsTemporarily(), { passive: true });
-  }
+    track.addEventListener("mouseenter", () => { paused = true; });
+    track.addEventListener("mouseleave", () => { paused = false; });
+    track.addEventListener("focusin", () => { paused = true; });
+    track.addEventListener("focusout", () => { paused = false; });
+    track.addEventListener("pointerdown", () => { paused = true; });
+    track.addEventListener("pointerup", () => pauseTemporarily());
+    track.addEventListener("touchend", () => pauseTemporarily(), { passive: true });
+    track.addEventListener("wheel", () => pauseTemporarily(), { passive: true });
+
+    return { pauseTemporarily };
+  };
+
+  const galleryTrack = document.getElementById("gallery-track");
+  const galleryControls = setupInfiniteScroller(galleryTrack, { speed: 24, pauseDelay: 2600 });
+
+  document.querySelector("[data-gallery-prev]")?.addEventListener("click", () => {
+    galleryControls.pauseTemporarily();
+    scrollTrack(galleryTrack, -1);
+  });
+  document.querySelector("[data-gallery-next]")?.addEventListener("click", () => {
+    galleryControls.pauseTemporarily();
+    scrollTrack(galleryTrack, 1);
+  });
+
+  const reviewsTrack = document.getElementById("reviews-track");
+  const reviewControls = setupInfiniteScroller(reviewsTrack, { speed: 28, pauseDelay: 2200 });
 
   document.querySelector("[data-review-prev]")?.addEventListener("click", () => {
-    pauseReviewsTemporarily();
+    reviewControls.pauseTemporarily();
     scrollTrack(reviewsTrack, -1);
   });
   document.querySelector("[data-review-next]")?.addEventListener("click", () => {
-    pauseReviewsTemporarily();
+    reviewControls.pauseTemporarily();
     scrollTrack(reviewsTrack, 1);
   });
 
