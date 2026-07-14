@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Rent A Car 007</title>
+  <desc id="desc">Logo e kuqe Rent A Car 007 me simbol të bardhë të veturës.</desc>
+  <rect width="512" height="512" fill="#ef0d4f"/>
+  <text x="256" y="128" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="700" letter-spacing="1">RENT A CAR</text>
+  <text x="256" y="186" text-anchor="middle" fill="#050505" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" letter-spacing="2">007</text>
+  <circle cx="256" cy="330" r="118" fill="none" stroke="#080808" stroke-width="18"/>
+  <rect x="169" y="243" width="174" height="174" rx="28" fill="#080808"/>
+  <g fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M204 338h-12c-7 0-12-5-12-12v-13c0-9 5-17 14-21l13-7 13-24c4-8 12-13 21-13h42c10 0 18 5 22 14l11 24 13 6c9 4 14 12 14 22v12c0 7-5 12-12 12h-12"/>
+    <path d="M213 285h89"/>
+    <path d="M221 285l12-23h48c7 0 13 4 16 10l6 13"/>
+    <path d="M202 311h24l10 10h41l10-10h25"/>
+    <path d="M226 342h61"/>
+    <circle cx="217" cy="339" r="14"/>
+    <circle cx="302" cy="339" r="14"/>
+    <path d="M188 306h18M306 306h21"/>
+  </g>
+</svg>

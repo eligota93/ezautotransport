@@ -2,525 +2,388 @@
 <html lang="sq">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <meta name="theme-color" content="#050607">
-  <title>EZ Autotransport | Transport i Veturave nga Evropa në Kosovë</title>
-  <meta name="description" content="EZ Autotransport ofron transport të sigurt të veturave nga Gjermania, Austria, Holanda dhe Belgjika drejt Kosovës dhe anasjelltas.">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="sq_AL">
-  <meta property="og:title" content="EZ Autotransport | Transport i Veturave">
-  <meta property="og:description" content="Transport i sigurt i veturave nga Evropa në Kosovë dhe anasjelltas.">
-  <meta property="og:image" content="assets/images/og-image.webp">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Rezervoni veturën tuaj me Rent A Car 007. Shërbim i shpejtë, komunikim direkt dhe dorëzim sipas marrëveshjes në Kosovë.">
+  <meta name="robots" content="index,follow">
+  <title>Rent A Car 007 | Vetura me qira në Kosovë</title>
+
+  <link rel="canonical" href="https://rentacar007.example/">
+  <link rel="icon" type="image/png" href="assets/logo/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site-v4.css">
+  <link rel="preload" href="assets/images/hero-car.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="css/style.css?v=20260714-2">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rent A Car 007 | Vetura me qira në Kosovë">
+  <meta property="og:description" content="Shërbim i shpejtë, komunikim direkt dhe dorëzim sipas marrëveshjes në Kosovë.">
+  <meta property="og:image" content="assets/images/og-rentacar007.jpg">
+  <meta property="og:locale" content="sq_AL">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rent A Car 007 | Vetura me qira në Kosovë">
+  <meta name="twitter:description" content="Rezervoni veturën tuaj shpejt dhe lehtë përmes WhatsApp-it.">
+  <meta name="twitter:image" content="assets/images/og-rentacar007.jpg">
+
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"EZ Autotransport",
-    "description":"Transport i veturave nga Evropa në Kosovë dhe nga Kosova në Evropë.",
-    "telephone":"+38349299766",
-    "address":{"@type":"PostalAddress","addressLocality":"Mitrovicë","addressCountry":"XK"},
-    "sameAs":["https://www.instagram.com/autotransport.ez/"]
+    "@context": "https://schema.org",
+    "@type": "AutoRental",
+    "name": "Rent A Car 007",
+    "description": "Vetura me qira, shërbim i shpejtë dhe rezervim i menjëhershëm në Kosovë.",
+    "telephone": "+38344181803",
+    "areaServed": {"@type": "Country", "name": "Kosovë"},
+    "sameAs": ["https://instagram.com/rentacar_007"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+38344181803",
+      "contactType": "rezervime",
+      "availableLanguage": ["Albanian"]
+    }
   }
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Kalo te përmbajtja</a>
+  <a class="skip-link" href="#main-content">Kalo te përmbajtja</a>
 
-  <header class="site-header" id="header">
-    <div class="container header-inner">
-      <a class="brand" href="#ballina" aria-label="EZ Autotransport - Ballina">
-        <img src="assets/images/ez-autotransport-logo.webp" alt="EZ Autotransport">
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner container-wide">
+      <a class="brand" href="#ballina" aria-label="Rent A Car 007 — Ballina">
+        <img src="assets/logo/rentacar007-logo.png" width="175" height="48" alt="Logoja Rent A Car 007">
       </a>
 
-      <button class="menu-toggle" type="button" aria-label="Hap menynë" aria-expanded="false" aria-controls="mobile-menu">
+      <nav class="desktop-nav" aria-label="Navigimi kryesor">
+        <a href="#ballina" class="nav-link active">Ballina</a>
+        <a href="#veturat" class="nav-link">Veturat</a>
+        <a href="#rreth-nesh" class="nav-link">Rreth nesh</a>
+        <a href="#vleresimet" class="nav-link">Vlerësimet</a>
+        <a href="#kontakt" class="nav-link">Kontakt</a>
+      </nav>
+
+      <a class="button button-primary header-cta" href="#rezervimi">Rezervo tani</a>
+
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Hap menynë">
         <span></span><span></span><span></span>
       </button>
-
-      <nav class="desktop-nav" aria-label="Navigimi kryesor">
-        <a href="#ballina">Ballina</a>
-        <a href="#sherbimet">Shërbimet</a>
-        <a href="#destinacionet">Destinacionet</a>
-        <a href="#procesi">Si funksionon</a>
-        <a href="#galeria">Galeria</a>
-        <a href="#faq">Pyetje</a>
-        <a href="#kontakti">Kontakti</a>
-        <a class="nav-cta" href="#oferta">Kërko ofertë</a>
-      </nav>
     </div>
-
-    <nav class="mobile-menu" id="mobile-menu" aria-label="Menyja mobile">
-      <div class="container mobile-menu-inner">
-        <a href="#ballina">Ballina</a>
-        <a href="#sherbimet">Shërbimet</a>
-        <a href="#destinacionet">Destinacionet</a>
-        <a href="#procesi">Si funksionon</a>
-        <a href="#galeria">Galeria</a>
-        <a href="#faq">Pyetje të shpeshta</a>
-        <a href="#kontakti">Kontakti</a>
-        <a class="button button-primary" href="#oferta">Kërko ofertë</a>
-        <a class="button button-secondary" href="https://wa.me/38349299766" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </nav>
   </header>
 
-  <main id="main">
-    <section class="hero" id="ballina">
-      <img class="hero-image" src="assets/images/hero-transport-premium.webp" alt="Transport premium i veturave luksoze" fetchpriority="high">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Transport ndërkombëtar i veturave</p>
-          <h1>Transport premium i veturave nga Evropa në Kosovë</h1>
-          <p class="hero-text">EZ Autotransport ofron transport të sigurt për vetura premium, sportive dhe luksoze. E marrim veturën në lokacionin e dakorduar dhe e dërgojmë me kujdes, komunikim të vazhdueshëm dhe dorëzim sipas marrëveshjes.</p>
+  <div class="menu-overlay" id="menuOverlay" hidden></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true" aria-label="Menyja mobile">
+    <div class="mobile-menu-top">
+      <img src="assets/logo/rentacar007-logo.png" width="175" height="48" alt="Logoja Rent A Car 007">
+      <button class="menu-close" id="menuClose" type="button" aria-label="Mbyll menynë">×</button>
+    </div>
+    <nav class="mobile-nav" aria-label="Navigimi mobile">
+      <a href="#ballina">Ballina</a>
+      <a href="#veturat">Veturat</a>
+      <a href="#rreth-nesh">Rreth nesh</a>
+      <a href="#vleresimet">Vlerësimet</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#rezervimi" class="button button-primary">Rezervo tani</a>
+    </nav>
+  </aside>
+
+  <main id="main-content">
+    <section class="hero section-anchor" id="ballina" aria-labelledby="heroTitle">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <img class="hero-car" src="assets/images/hero-car.webp" width="1440" height="1000" alt="Veturë sportive premium me ngjyrë të kuqe në ambient urban">
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-content container">
+        <div class="hero-copy reveal">
+          <p class="eyebrow outlined"><span aria-hidden="true">★</span> Premium car rental në Kosovë</p>
+          <h1 id="heroTitle">Vetura me qira, shërbim i shpejtë dhe rezervim i menjëhershëm</h1>
+          <p class="hero-description">Zgjidhni veturën që ju përshtatet dhe rezervojeni lehtë përmes WhatsApp-it.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#oferta">Kërko ofertë</a>
-            <a class="button button-secondary" href="https://wa.me/38349299766?text=P%C3%ABrsh%C3%ABndetje%20EZ%20Autotransport%2C%20d%C3%ABshiroj%20t%C3%AB%20k%C3%ABrkoj%20nj%C3%AB%20ofert%C3%AB%20p%C3%ABr%20transportin%20e%20nj%C3%AB%20veture." target="_blank" rel="noopener">Na shkruaj në WhatsApp</a>
+            <a class="button button-light" href="#veturat">Shiko veturat <span aria-hidden="true">→</span></a>
+            <a class="button button-primary js-general-whatsapp" href="https://wa.me/38344181803" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.6a8 8 0 0 1-11.8 7l-4.2 1.1 1.1-4A8 8 0 1 1 20 11.6Z"/><path d="M8.8 8.4c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.8 1.9c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.5.9 1.2 1.6 2.1 2.1.2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .4-.2 1.4-.9 2-.6.5-1.4.8-2.2.6-1.3-.3-3.1-1-4.8-2.5-1.4-1.2-2.5-3.1-2.8-4.4-.2-.8.1-1.6.6-2.1Z"/></svg>
+              Rezervo në WhatsApp
+            </a>
           </div>
-          <div class="hero-pills" aria-label="Destinacionet kryesore">
-            <span>Gjermani</span>
-            <span>Austri</span>
-            <span>Holandë</span>
-            <span>Belgjikë</span>
-            <span>Kosovë</span>
+
+          <div class="hero-stats" aria-label="Informacione të shpejta">
+            <div class="stat"><strong class="accent">+383</strong><span>Kosova support</span></div>
+            <div class="stat"><strong>007</strong><span>Shërbim i shpejtë</span></div>
+            <div class="stat"><strong>100%</strong><span>Klientë të kënaqur</span></div>
           </div>
         </div>
-        <aside class="hero-card" aria-label="Përmbledhje e shërbimit premium">
-          <p class="hero-card-label">Shërbim premium</p>
-          <h2>Veturën tuaj e trajtojmë si tonën</h2>
-          <ul class="hero-feature-list">
-            <li><span>01</span><div><strong>Marrje në lokacion</strong><p>Organizojmë marrjen e veturës sipas marrëveshjes.</p></div></li>
-            <li><span>02</span><div><strong>Sigurim dhe kujdes</strong><p>Ngarkim i kontrolluar për vetura premium dhe luksoze.</p></div></li>
-            <li><span>03</span><div><strong>Komunikim i vazhdueshëm</strong><p>Ju njoftojmë gjatë procesit të transportit.</p></div></li>
-            <li><span>04</span><div><strong>Dorëzim i garantuar</strong><p>Dërgesë në destinacion me korrektësi dhe kujdes.</p></div></li>
-          </ul>
-          <div class="hero-stats">
-            <article><strong>5</strong><span>Shtete kryesore</span></article>
-            <article><strong>Premium</strong><span>Transport për vetura luksoze</span></article>
-            <article><strong>WhatsApp</strong><span>Për ofertë të shpejtë</span></article>
-          </div>
-        </aside>
       </div>
     </section>
 
-    <section class="trust-strip" aria-label="Përparësitë kryesore">
-      <div class="container trust-grid">
-        <article class="trust-item">
-          <span class="icon-box" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M3 17h2m14 0h2M5 17V8h11l3 4v5M7 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm8 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0ZM5 12h14"/></svg>
-          </span>
-          <span>Marrje në lokacion</span>
-        </article>
-        <article class="trust-item">
-          <span class="icon-box" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-4Zm-3 9 2 2 4-5"/></svg>
-          </span>
-          <span>Transport i kontrolluar</span>
-        </article>
-        <article class="trust-item">
-          <span class="icon-box" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5Zm4 5h8M8 13h5"/></svg>
-          </span>
-          <span>Komunikim i vazhdueshëm</span>
-        </article>
-        <article class="trust-item">
-          <span class="icon-box" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 11h16v8H4v-8Zm3 0 2-5h6l2 5M8 15h8m-6 4v2m4-2v2"/></svg>
-          </span>
-          <span>Dorëzim i garantuar</span>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="oferta">
+    <section class="section section-anchor vehicles-section" id="veturat" aria-labelledby="vehiclesTitle">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Kërko ofertë</p>
-          <h2>Na dërgoni të dhënat e veturës</h2>
-          <p>Plotësoni formularin dhe kërkesa do të përgatitet automatikisht për WhatsApp.</p>
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">Koleksioni ynë</p>
+          <h2 id="vehiclesTitle">Zgjidhni veturën tuaj</h2>
+          <span class="heading-line" aria-hidden="true"></span>
+          <p>Veturat tona kontrollohen rregullisht për t’ju ofruar siguri maksimale dhe komoditet gjatë gjithë udhëtimit tuaj.</p>
+        </div>
+        <div class="vehicle-grid" id="vehicleGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="gallery-section" aria-labelledby="galleryTitle">
+      <div class="container gallery-heading reveal">
+        <div>
+          <p class="eyebrow">Galeria vizuale</p>
+          <h2 id="galleryTitle">Flota jonë në aksion</h2>
+        </div>
+        <p class="gallery-hint"><span aria-hidden="true">←</span> Më shumë foto — rrëshqit</p>
+      </div>
+      <div class="marquee gallery-marquee" data-marquee="left" data-speed="55" aria-label="Galeri e veturave në lëvizje">
+        <div class="marquee-track" id="galleryTrack"></div>
+      </div>
+    </section>
+
+    <section class="section section-anchor why-section" id="rreth-nesh" aria-labelledby="whyTitle">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">Pse ne?</p>
+          <h2 id="whyTitle">Pse të zgjidhni Rent A Car 007?</h2>
+          <span class="heading-line" aria-hidden="true"></span>
+          <p>Ne ofrojmë më shumë se thjesht vetura me qira – ne ofrojmë një eksperiencë komode, të sigurt dhe të shpejtë udhëtimi në Kosovë.</p>
         </div>
 
-        <form class="quote-form" id="quote-form" novalidate>
+        <div class="benefit-grid">
+          <article class="benefit-card reveal">
+            <div class="icon-box" aria-hidden="true">ϟ</div>
+            <h3>Rezervim i menjëhershëm</h3>
+            <p>Rezervoni veturën tuaj brenda pak minutave direkt përmes WhatsApp pa procedura të gjata burokratike.</p>
+            <span class="card-line" aria-hidden="true"></span>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 2.8 8.1 7 10 4.2-1.9 7-5.5 7-10V6l-7-3Z"/></svg>
+            </div>
+            <h3>Shërbim i shpejtë</h3>
+            <p>Stafi ynë është gjithmonë i gatshëm t’ju asistojë në kohë rekord për marrjen dhe dorëzimin e veturës.</p>
+            <span class="card-line" aria-hidden="true"></span>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="icon-box" aria-hidden="true">✣</div>
+            <h3>Vetura të pastra dhe të mirëmbajtura</h3>
+            <p>Të gjitha veturat tona pastrohen dhe kontrollohen pas çdo përdorimi, si dhe mirëmbahen rregullisht.</p>
+            <span class="card-line" aria-hidden="true"></span>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8.5 4.5 6 6c-1 1-.2 4 2.5 6.8 2.8 2.7 5.8 3.5 6.8 2.5l1.5-2.5-3.4-1.6-1.1 1.5c-.4.5-1.5.1-2.4-.8-.9-.9-1.3-2-.8-2.4l1.5-1.1-2.1-3.9Z"/></svg>
+            </div>
+            <h3>Komunikim direkt</h3>
+            <p>Asnjë ndërmjetës. Komunikoni direkt me ne përmes telefonit ose WhatsApp-it për çdo kërkesë tuajën.</p>
+            <span class="card-line" aria-hidden="true"></span>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="icon-box" aria-hidden="true">✓</div>
+            <h3>Proces i thjeshtë rezervimi</h3>
+            <p>Zgjidhni veturën, plotësoni formularin e thjeshtë dhe udhëtoni të qetë.</p>
+            <span class="card-line" aria-hidden="true"></span>
+          </article>
+          <article class="benefit-card contact-benefit reveal">
+            <p class="eyebrow">Asistencë 24/7</p>
+            <h3>Keni pyetje?</h3>
+            <p>Na kontaktoni direkt në WhatsApp për çfarëdo kërkese të veçantë rreth veturave tona apo periudhës së qiradhënies.</p>
+            <a class="text-link js-general-whatsapp" href="https://wa.me/38344181803" target="_blank" rel="noopener">Na shkruani tani <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-anchor reviews-section" id="vleresimet" aria-labelledby="reviewsTitle">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">Opinione</p>
+          <h2 id="reviewsTitle">Çfarë thonë klientët tanë</h2>
+          <span class="heading-line" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="marquee reviews-marquee" data-marquee="right" data-speed="62" aria-label="Vlerësime të klientëve në lëvizje">
+        <div class="marquee-track" id="reviewsTrack"></div>
+      </div>
+    </section>
+
+    <section class="section section-anchor booking-section" id="rezervimi" aria-labelledby="bookingTitle">
+      <div class="container booking-container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">Rezervim i menjëhershëm</p>
+          <h2 id="bookingTitle">Rezervo veturën në WhatsApp</h2>
+          <span class="heading-line" aria-hidden="true"></span>
+          <p>Plotësoni të dhënat më poshtë për të dërguar kërkesën tuaj direkt te ne përmes WhatsApp. Rezervimi do të konfirmohet në pak minuta.</p>
+        </div>
+
+        <form class="booking-form reveal" id="bookingForm" novalidate>
           <div class="form-grid">
-            <label>
-              <span>Emri dhe mbiemri *</span>
-              <input type="text" name="name" autocomplete="name" required>
-            </label>
-            <label>
-              <span>Numri i telefonit *</span>
-              <input type="tel" name="phone" autocomplete="tel" inputmode="tel" required>
-            </label>
-            <label>
-              <span>Shteti ku ndodhet vetura *</span>
-              <select name="country" required>
-                <option value="">Zgjidhni shtetin</option>
-                <option>Gjermani</option>
-                <option>Austri</option>
-                <option>Holandë</option>
-                <option>Belgjikë</option>
-                <option>Kosovë</option>
-                <option>Tjetër</option>
+            <div class="form-field">
+              <label for="firstName">Emri <span>*</span></label>
+              <input id="firstName" name="firstName" type="text" autocomplete="given-name" placeholder="Shkruani emrin tuaj" required>
+              <small class="field-error" id="firstNameError"></small>
+            </div>
+            <div class="form-field">
+              <label for="lastName">Mbiemri <span>*</span></label>
+              <input id="lastName" name="lastName" type="text" autocomplete="family-name" placeholder="Shkruani mbiemrin tuaj" required>
+              <small class="field-error" id="lastNameError"></small>
+            </div>
+            <div class="form-field">
+              <label for="phone">Numri i telefonit / WhatsApp <span>*</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="P.sh. +383 44 123 456" required>
+              <small class="field-error" id="phoneError"></small>
+            </div>
+            <div class="form-field">
+              <label for="vehicleSelect">Zgjidhni veturën <span>*</span></label>
+              <select id="vehicleSelect" name="vehicle" required>
+                <option value="">-- Zgjidhni veturën --</option>
               </select>
-            </label>
-            <label>
-              <span>Qyteti *</span>
-              <input type="text" name="city" required>
-            </label>
-            <label>
-              <span>Destinacioni *</span>
-              <input type="text" name="destination" required>
-            </label>
-            <label>
-              <span>Marka *</span>
-              <input type="text" name="brand" placeholder="p.sh. BMW" required>
-            </label>
-            <label>
-              <span>Modeli *</span>
-              <input type="text" name="model" placeholder="p.sh. X5" required>
-            </label>
-            <label>
-              <span>Viti i prodhimit</span>
-              <input type="number" name="year" min="1950" max="2030" inputmode="numeric">
-            </label>
-            <label>
-              <span>Gjendja e veturës</span>
-              <select name="condition">
-                <option>Funksionale</option>
-                <option>Nuk ndizet</option>
-                <option>E dëmtuar</option>
-                <option>Tjetër</option>
-              </select>
-            </label>
-            <label>
-              <span>Data e preferuar</span>
-              <input type="date" name="date">
-            </label>
-            <label class="form-wide">
-              <span>Informacion shtesë</span>
-              <textarea name="message" rows="4" placeholder="Shkruani detaje shtesë për veturën ose lokacionin."></textarea>
-            </label>
+              <small class="field-error" id="vehicleSelectError"></small>
+            </div>
+            <div class="form-field">
+              <label for="pickupDate">Data e marrjes <span>*</span></label>
+              <input id="pickupDate" name="pickupDate" type="date" required>
+              <small class="field-error" id="pickupDateError"></small>
+            </div>
+            <div class="form-field">
+              <label for="pickupTime">Ora e marrjes <span>*</span></label>
+              <input id="pickupTime" name="pickupTime" type="time" required>
+              <small class="field-error" id="pickupTimeError"></small>
+            </div>
+            <div class="form-field">
+              <label for="returnDate">Data e kthimit <span>*</span></label>
+              <input id="returnDate" name="returnDate" type="date" required>
+              <small class="field-error" id="returnDateError"></small>
+            </div>
+            <div class="form-field">
+              <label for="returnTime">Ora e kthimit <span>*</span></label>
+              <input id="returnTime" name="returnTime" type="time" required>
+              <small class="field-error" id="returnTimeError"></small>
+            </div>
+            <div class="form-field full-width">
+              <label for="location">Lokacioni i marrjes dhe kthimit <span>*</span></label>
+              <input id="location" name="location" type="text" autocomplete="street-address" placeholder="P.sh. Aeroporti i Prishtinës, Prishtinë, etj." required>
+              <small class="field-error" id="locationError"></small>
+            </div>
+            <div class="form-field full-width">
+              <label for="message">Mesazh shtesë <span class="optional">(opsionale)</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Kërkesa apo detaje shtesë mbi rezervimin tuaj..."></textarea>
+            </div>
           </div>
-          <p class="form-status" id="form-status" role="alert"></p>
-          <button class="button button-primary form-submit" type="submit">Dërgo kërkesën në WhatsApp</button>
+          <button class="button button-primary submit-button" type="submit">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.6a8 8 0 0 1-11.8 7l-4.2 1.1 1.1-4A8 8 0 1 1 20 11.6Z"/></svg>
+            Dërgo rezervimin në WhatsApp
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
 
-    <section class="section services-section" id="sherbimet">
+    <section class="section section-anchor contact-section" id="kontakt" aria-labelledby="contactTitle">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Shërbimet</p>
-          <h2>Transport i përshtatur për çdo klient</h2>
-          <p>Zgjidhje praktike për individë, tregtarë dhe autosallone.</p>
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">Na kontaktoni</p>
+          <h2 id="contactTitle">Flisni me ne direkt</h2>
+          <span class="heading-line" aria-hidden="true"></span>
+          <p>Jemi të gatshëm t’ju përgjigjemi në çdo kohë për të organizuar qiranë e veturës tuaj. Komunikim i pastër dhe pa ndërmjetës.</p>
         </div>
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="service-card-top"><span class="service-number">01</span><span class="service-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h8v8M8 16l8-8"/></svg></span></div>
-            <h3>Transport individual</h3>
-            <p>Për transportin e një veture ndërmjet Evropës dhe Kosovës.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card-top"><span class="service-number">02</span><span class="service-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h8v8M8 16l8-8"/></svg></span></div>
-            <h3>Për autosallone</h3>
-            <p>Transport i organizuar për një ose disa vetura.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card-top"><span class="service-number">03</span><span class="service-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h8v8M8 16l8-8"/></svg></span></div>
-            <h3>Marrje në lokacion</h3>
-            <p>E marrim veturën në adresën ose pikën e dakorduar.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card-top"><span class="service-number">04</span><span class="service-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h8v8M8 16l8-8"/></svg></span></div>
-            <h3>Kosovë–Evropë</h3>
-            <p>Transport edhe nga Kosova drejt destinacioneve në Evropë.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card-top"><span class="service-number">05</span><span class="service-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h8v8M8 16l8-8"/></svg></span></div>
-            <h3>Kujdes i veçantë</h3>
-            <p>Ngarkim dhe transport i kontrolluar për çdo lloj veture.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card-top"><span class="service-number">06</span><span class="service-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h8v8M8 16l8-8"/></svg></span></div>
-            <h3>Vetura jo-funksionale</h3>
-            <p>Kontrollojmë mundësinë e transportit për vetura që nuk ndizen.</p>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <section class="section section-muted destinations-section" id="destinacionet">
-      <div class="container">
-        <div class="section-heading destinations-heading">
-          <p class="eyebrow">Destinacionet</p>
-          <h2>Nga Evropa në Kosovë dhe anasjelltas</h2>
-          <p>Organizojmë marrjen dhe transportin e veturës drejt destinacionit të dakorduar.</p>
+        <div class="contact-cards">
+          <a class="contact-card reveal" href="tel:+38344181803">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8.5 4.5 6 6c-1 1-.2 4 2.5 6.8 2.8 2.7 5.8 3.5 6.8 2.5l1.5-2.5-3.4-1.6-1.1 1.5c-.4.5-1.5.1-2.4-.8-.9-.9-1.3-2-.8-2.4l1.5-1.1-2.1-3.9Z"/></svg>
+            </div>
+            <span>Numri i telefonit</span>
+            <strong>+383 44 181 803</strong>
+          </a>
+          <a class="contact-card reveal" href="https://wa.me/38344181803" target="_blank" rel="noopener">
+            <div class="contact-icon whatsapp" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 11.6a8 8 0 0 1-11.8 7l-4.2 1.1 1.1-4A8 8 0 1 1 20 11.6Z"/></svg>
+            </div>
+            <span>WhatsApp</span>
+            <strong>+383 44 181 803</strong>
+          </a>
+          <a class="contact-card reveal" href="https://instagram.com/rentacar_007" target="_blank" rel="noopener">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3.5"/><path d="M17.4 6.7h.01"/></svg>
+            </div>
+            <span>Instagram</span>
+            <strong>@rentacar_007</strong>
+          </a>
         </div>
-        <div class="destination-list" aria-label="Shtetet kryesore të transportit">
-          <article class="destination-item">
-            <div><span class="destination-number">01</span><h3>Gjermani</h3></div>
-            <p>Marrje në lokacion dhe transport drejt Kosovës.</p>
-            <a href="#oferta">Kërko ofertë <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10M13 8l4 4-4 4"/></svg></a>
-          </article>
-          <article class="destination-item">
-            <div><span class="destination-number">02</span><h3>Austri</h3></div>
-            <p>Marrje në lokacion dhe transport drejt Kosovës.</p>
-            <a href="#oferta">Kërko ofertë <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10M13 8l4 4-4 4"/></svg></a>
-          </article>
-          <article class="destination-item">
-            <div><span class="destination-number">03</span><h3>Holandë</h3></div>
-            <p>Marrje në lokacion dhe transport drejt Kosovës.</p>
-            <a href="#oferta">Kërko ofertë <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10M13 8l4 4-4 4"/></svg></a>
-          </article>
-          <article class="destination-item">
-            <div><span class="destination-number">04</span><h3>Belgjikë</h3></div>
-            <p>Marrje në lokacion dhe transport drejt Kosovës.</p>
-            <a href="#oferta">Kërko ofertë <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10M13 8l4 4-4 4"/></svg></a>
-          </article>
-          <article class="destination-item">
-            <div><span class="destination-number">05</span><h3>Kosovë</h3></div>
-            <p>Marrje në Kosovë dhe transport drejt Evropës.</p>
-            <a href="#oferta">Kërko ofertë <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10M13 8l4 4-4 4"/></svg></a>
-          </article>
-        </div>
-        <p class="section-note">Për qytete ose shtete të tjera, na kontaktoni për konfirmim.</p>
-      </div>
-    </section>
 
-    <section class="section section-dark process-section" id="procesi">
-      <div class="container process-container">
-        <div class="section-heading">
-          <p class="eyebrow">Procesi</p>
-          <h2>Si funksionon transporti</h2>
+        <div class="contact-actions reveal">
+          <a class="button button-light" href="tel:+38344181803">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8.5 4.5 6 6c-1 1-.2 4 2.5 6.8 2.8 2.7 5.8 3.5 6.8 2.5l1.5-2.5-3.4-1.6-1.1 1.5c-.4.5-1.5.1-2.4-.8-.9-.9-1.3-2-.8-2.4l1.5-1.1-2.1-3.9Z"/></svg>
+            Thirr tani
+          </a>
+          <a class="button button-primary js-general-whatsapp" href="https://wa.me/38344181803" target="_blank" rel="noopener">Shkruaj në WhatsApp</a>
+          <a class="button button-dark" href="https://instagram.com/rentacar_007" target="_blank" rel="noopener">Na ndiq në Instagram</a>
         </div>
-        <div class="timeline">
-          <article class="step"><span>01</span><h3>Kontaktimi dhe rezervimi</h3><p>Na dërgoni lokacionin, destinacionin dhe të dhënat e veturës.</p></article>
-          <article class="step"><span>02</span><h3>Marrja e veturës</h3><p>Koordinojmë marrjen e veturës në lokacionin e dakorduar.</p></article>
-          <article class="step"><span>03</span><h3>Transporti i kontrolluar</h3><p>Veturën e transportojmë me kujdes dhe kontroll gjatë gjithë rrugës.</p></article>
-          <article class="step"><span>04</span><h3>Dorëzimi i garantuar</h3><p>Veturën e dorëzojmë në destinacionin e përcaktuar sipas marrëveshjes.</p></article>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" id="pse-ne">
-      <div class="container split-layout">
-        <div class="split-image">
-          <img src="assets/images/transportues-veturash.webp" alt="Kamion transporti me vetura luksoze" loading="lazy">
-        </div>
-        <div class="split-content">
-          <p class="eyebrow">Pse ne</p>
-          <h2>Veturën tuaj e trajtojmë si tonën</h2>
-          <ul class="check-list">
-            <li>Kujdes gjatë ngarkimit dhe shkarkimit</li>
-            <li>Transport i kontrolluar</li>
-            <li>Komunikim i vazhdueshëm</li>
-            <li>Marrje sipas marrëveshjes</li>
-            <li>Dorëzim në destinacion</li>
-            <li>Shërbim për individë dhe autosallone</li>
-            <li>Kontakt përmes telefonit, WhatsApp dhe Viber</li>
-            <li>Korrektësi gjatë gjithë procesit</li>
-          </ul>
-          <div class="red-callout">Shpejtësi, siguri dhe korrektësi në çdo transport.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-muted">
-      <div class="container audience-grid">
-        <article class="audience-card">
-          <p class="eyebrow">Për individë</p>
-          <h2>Për klientë individualë</h2>
-          <p>Keni blerë një veturë në Evropë? Na dërgoni lokacionin dhe të dhënat e veturës për të marrë një ofertë.</p>
-          <a class="button button-primary" href="https://wa.me/38349299766?text=P%C3%ABrsh%C3%ABndetje%2C%20d%C3%ABshiroj%20ofert%C3%AB%20p%C3%ABr%20transportin%20e%20nj%C3%AB%20veture." target="_blank" rel="noopener">Kërko ofertë</a>
-        </article>
-        <article class="audience-card">
-          <p class="eyebrow">Për biznese</p>
-          <h2>Për autosallone dhe tregtarë</h2>
-          <p>Organizojmë transportin e një ose disa veturave sipas lokacionit dhe destinacionit.</p>
-          <a class="button button-secondary dark-button" href="https://wa.me/38349299766?text=P%C3%ABrsh%C3%ABndetje%2C%20d%C3%ABshiroj%20t%C3%AB%20diskutoj%20bashk%C3%ABpunim%20p%C3%ABr%20transport%20t%C3%AB%20veturave." target="_blank" rel="noopener">Kontakto për bashkëpunim</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="galeria">
-      <div class="container">
-        <div class="section-heading heading-row">
+        <div class="delivery-box reveal">
+          <div class="delivery-icon" aria-hidden="true">?</div>
           <div>
-            <p class="eyebrow">Galeria</p>
-            <h2>Transportet tona</h2>
+            <h3>Dorëzim kudo në Kosovë</h3>
+            <p>Dorëzimin e veturave e bëjmë në Aeroportin e Prishtinës apo në çdo lokacion tjetër sipas marrëveshjes paraprake. Na shkruani në WhatsApp për të sinkronizuar lokacionin tuaj ideal.</p>
           </div>
-        </div>
-        <div class="marquee-viewport gallery-marquee" aria-label="Galeria lëvizëse e transporteve">
-          <div class="gallery-track marquee-track" id="gallery-track">
-            <div class="marquee-group">
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-01.webp"><img src="assets/images/galeri-01.webp" alt="Lamborghini e verdhë dhe Ferrari e kuqe në transport" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-02.webp"><img src="assets/images/galeri-02.webp" alt="Porsche në transportues me vetura të tjera luksoze" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-03.webp"><img src="assets/images/galeri-03.webp" alt="Lamborghini e bardhë në transportues me vetura premium" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-04.webp"><img src="assets/images/galeri-04.webp" alt="Ferrari e kuqe matte në transportues" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-05.webp"><img src="assets/images/galeri-05.webp" alt="Ferrari e kuqe në afërsi gjatë transportit" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-06.webp"><img src="assets/images/galeri-06.webp" alt="Lamborghini e bardhë dhe veturë e artë në transportues" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-07.webp"><img src="assets/images/galeri-07.webp" alt="Mercedes G-Class dhe Porsche në transportues" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-08.webp"><img src="assets/images/galeri-08.webp" alt="Ferrari dhe Porsche në trailer të gjelbër" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-09.webp"><img src="assets/images/galeri-09.webp" alt="Superveturë e bardhë në transportues" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-10.webp"><img src="assets/images/galeri-10.webp" alt="Lamborghini e bardhë me shirita portokalli në rrugë" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-11.webp"><img src="assets/images/galeri-11.webp" alt="Lamborghini blu në transportues" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-12.webp"><img src="assets/images/galeri-12.webp" alt="Kamion transporti me Rolls-Royce në trailer" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-13.webp"><img src="assets/images/galeri-13.webp" alt="Mercedes SLS AMG i zi në transportues" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-14.webp"><img src="assets/images/galeri-14.webp" alt="Lamborghini e verdhë dhe Mercedes G-Class në transport" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-15.webp"><img src="assets/images/galeri-15.webp" alt="Lamborghini e verdhë me dyer të hapura në trailer" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-16.webp"><img src="assets/images/galeri-16.webp" alt="Ferrari e kuqe në transportues nga afër" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-17.webp"><img src="assets/images/galeri-17.webp" alt="Audi R8 dhe Mercedes G-Class në trailer" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-18.webp"><img src="assets/images/galeri-18.webp" alt="Superveturë e bardhë përpara tabelës Alberti" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-19.webp"><img src="assets/images/galeri-19.webp" alt="Audi R8 e verdhë në rrugë me transportues" loading="lazy"></button>
-            <button class="gallery-item" type="button" data-full="assets/images/galeri-20.webp"><img src="assets/images/galeri-20.webp" alt="Lamborghini e verdhë dhe Ferrari e kuqe në transportues" loading="lazy"></button>
-            </div>
-            <div class="marquee-group" aria-hidden="true">
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-01.webp"><img src="assets/images/galeri-01.webp" alt="Lamborghini e verdhë dhe Ferrari e kuqe në transport" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-02.webp"><img src="assets/images/galeri-02.webp" alt="Porsche në transportues me vetura të tjera luksoze" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-03.webp"><img src="assets/images/galeri-03.webp" alt="Lamborghini e bardhë në transportues me vetura premium" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-04.webp"><img src="assets/images/galeri-04.webp" alt="Ferrari e kuqe matte në transportues" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-05.webp"><img src="assets/images/galeri-05.webp" alt="Ferrari e kuqe në afërsi gjatë transportit" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-06.webp"><img src="assets/images/galeri-06.webp" alt="Lamborghini e bardhë dhe veturë e artë në transportues" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-07.webp"><img src="assets/images/galeri-07.webp" alt="Mercedes G-Class dhe Porsche në transportues" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-08.webp"><img src="assets/images/galeri-08.webp" alt="Ferrari dhe Porsche në trailer të gjelbër" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-09.webp"><img src="assets/images/galeri-09.webp" alt="Superveturë e bardhë në transportues" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-10.webp"><img src="assets/images/galeri-10.webp" alt="Lamborghini e bardhë me shirita portokalli në rrugë" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-11.webp"><img src="assets/images/galeri-11.webp" alt="Lamborghini blu në transportues" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-12.webp"><img src="assets/images/galeri-12.webp" alt="Kamion transporti me Rolls-Royce në trailer" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-13.webp"><img src="assets/images/galeri-13.webp" alt="Mercedes SLS AMG i zi në transportues" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-14.webp"><img src="assets/images/galeri-14.webp" alt="Lamborghini e verdhë dhe Mercedes G-Class në transport" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-15.webp"><img src="assets/images/galeri-15.webp" alt="Lamborghini e verdhë me dyer të hapura në trailer" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-16.webp"><img src="assets/images/galeri-16.webp" alt="Ferrari e kuqe në transportues nga afër" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-17.webp"><img src="assets/images/galeri-17.webp" alt="Audi R8 dhe Mercedes G-Class në trailer" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-18.webp"><img src="assets/images/galeri-18.webp" alt="Superveturë e bardhë përpara tabelës Alberti" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-19.webp"><img src="assets/images/galeri-19.webp" alt="Audi R8 e verdhë në rrugë me transportues" loading="lazy"></button>
-            <button class="gallery-item" tabindex="-1" type="button" data-full="assets/images/galeri-20.webp"><img src="assets/images/galeri-20.webp" alt="Lamborghini e verdhë dhe Ferrari e kuqe në transportues" loading="lazy"></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="vleresimet">
-      <div class="container">
-        <div class="section-heading heading-row">
-          <div>
-            <p class="eyebrow">Vlerësimet</p>
-            <h2>Çfarë thonë klientët</h2>
-            <p>Shembuj që mund të zëvendësohen me vlerësime reale.</p>
-          </div>
-        </div>
-        <div class="marquee-viewport reviews-marquee" aria-label="Vlerësimet lëvizëse të klientëve">
-          <div class="reviews-track marquee-track" id="reviews-track">
-            <div class="marquee-group">
-            <article class="review-card"><div class="review-top"><span class="initials">AK</span><div><h3>Klient individual</h3><p>Gjermani–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg></div><p>Komunikim i mirë gjatë gjithë procesit dhe dorëzim sipas marrëveshjes.</p><span class="sample-label">Shembull</span></article>
-            <article class="review-card"><div class="review-top"><span class="initials">BM</span><div><h3>Klient individual</h3><p>Austri–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg></div><p>Proces i qartë nga rezervimi deri te dorëzimi i veturës.</p><span class="sample-label">Shembull</span></article>
-            <article class="review-card"><div class="review-top"><span class="initials">DT</span><div><h3>Autosallon</h3><p>Belgjikë–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg></div><p>Koordinim korrekt për transportin e disa veturave njëkohësisht.</p><span class="sample-label">Shembull</span></article>
-            </div>
-            <div class="marquee-group" aria-hidden="true">
-            <article class="review-card" aria-hidden="true"><div class="review-top"><span class="initials">AK</span><div><h3>Klient individual</h3><p>Gjermani–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg></div><p>Komunikim i mirë gjatë gjithë procesit dhe dorëzim sipas marrëveshjes.</p><span class="sample-label">Shembull</span></article>
-            <article class="review-card" aria-hidden="true"><div class="review-top"><span class="initials">BM</span><div><h3>Klient individual</h3><p>Austri–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg></div><p>Proces i qartë nga rezervimi deri te dorëzimi i veturës.</p><span class="sample-label">Shembull</span></article>
-            <article class="review-card" aria-hidden="true"><div class="review-top"><span class="initials">DT</span><div><h3>Autosallon</h3><p>Belgjikë–Kosovë</p></div></div><div class="stars" aria-label="5 nga 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.83 5.74 6.33.92-4.58 4.46 1.08 6.31L12 17.32 6.34 20.3l1.08-6.31L2.84 9.46l6.33-.92L12 2.8Z"/></svg></div><p>Koordinim korrekt për transportin e disa veturave njëkohësisht.</p><span class="sample-label">Shembull</span></article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-muted" id="faq">
-      <div class="container faq-layout">
-        <div class="section-heading">
-          <p class="eyebrow">Pyetje të shpeshta</p>
-          <h2>Informacion para rezervimit</h2>
-        </div>
-        <div class="accordion">
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>Nga cilat shtete transportoni vetura?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Transportet kryesore organizohen ndërmjet Gjermanisë, Austrisë, Holandës, Belgjikës dhe Kosovës. Për shtete të tjera, na kontaktoni për konfirmim.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>A e merrni veturën në adresë?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Po, marrja mund të organizohet në lokacionin e dakorduar, varësisht nga adresa dhe mundësia e qasjes së transportuesit.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>Sa zgjat transporti?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Afati ndryshon sipas shtetit, qytetit, itinerarit dhe orarit të transportit. Pas pranimit të të dhënave ju informojmë për afatin e përafërt.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>Si llogaritet çmimi?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Çmimi varet nga lokacioni, destinacioni, modeli, madhësia dhe gjendja e veturës.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>Çfarë informacioni nevojitet për ofertë?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Na nevojiten shteti, qyteti, destinacioni, marka, modeli, viti dhe gjendja e veturës.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>A transportoni vetura që nuk ndizen?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Mundësia e transportit varet nga gjendja dhe lokacioni i veturës. Na dërgoni informacion të plotë për konfirmim.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>A transportoni vetura sportive ose luksoze?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Po, kërkesat për vetura sportive dhe luksoze trajtohen me kujdes të veçantë.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>A punoni me autosallone?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Po, ofrojmë transport për autosallone dhe tregtarë që kanë nevojë të transportojnë një ose disa vetura.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>A bëni transport nga Kosova në Evropë?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Po, transporti mund të organizohet edhe nga Kosova drejt Evropës sipas destinacionit dhe marrëveshjes.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>Si mund ta rezervoj transportin?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Na kontaktoni përmes telefonit, WhatsApp-it ose formularit të ofertës me të dhënat e veturës dhe lokacionit.</p></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="kontakti">
-      <div class="container contact-grid">
-        <div>
-          <p class="eyebrow">Kontakti</p>
-          <h2>Na kontaktoni</h2>
-          <p>Na telefononi ose na shkruani për lokacionin, destinacionin dhe modelin e veturës.</p>
-          <div class="contact-details">
-            <a href="tel:+38349299766"><span>Telefon / WhatsApp / Viber</span><strong>+383 49 299 766</strong></a>
-            <a href="https://www.instagram.com/autotransport.ez/" target="_blank" rel="noopener"><span>Instagram</span><strong>@autotransport.ez</strong></a>
-            <div><span>Lokacioni</span><strong>Mitrovicë, Kosovë</strong></div>
-          </div>
-        </div>
-        <div class="contact-actions">
-          <a class="button button-primary" href="tel:+38349299766">Telefono</a>
-          <a class="button button-secondary" href="https://wa.me/38349299766" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="button button-secondary" href="viber://chat?number=%2B38349299766">Viber</a>
-          <a class="button button-secondary" href="https://www.instagram.com/autotransport.ez/" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="assets/images/ez-autotransport-logo.webp" alt="EZ Autotransport">
-        <p>Transport profesional i veturave nga Evropa në Kosovë dhe anasjelltas.</p>
+    <div class="container footer-inner">
+      <a href="#ballina" class="footer-logo" aria-label="Kthehu në ballinë">
+        <img src="assets/logo/rentacar007-logo.png" width="175" height="48" alt="Logoja Rent A Car 007">
+      </a>
+      <p class="footer-slogan">Zgjedhja juaj e parë për qira të veturave në Kosovë</p>
+      <nav class="footer-nav" aria-label="Navigimi në fund të faqes">
+        <a href="#ballina">Ballina</a>
+        <a href="#veturat">Veturat</a>
+        <a href="#rreth-nesh">Rreth nesh</a>
+        <a href="#vleresimet">Vlerësimet</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <div class="footer-contacts">
+        <a href="tel:+38344181803">+383 44 181 803</a>
+        <a href="https://wa.me/38344181803" target="_blank" rel="noopener">+383 44 181 803</a>
+        <a href="https://instagram.com/rentacar_007" target="_blank" rel="noopener">@rentacar_007</a>
       </div>
-      <div>
-        <h3>Faqja</h3>
-        <a href="#sherbimet">Shërbimet</a>
-        <a href="#destinacionet">Destinacionet</a>
-        <a href="#procesi">Si funksionon</a>
-        <a href="#galeria">Galeria</a>
-      </div>
-      <div>
-        <h3>Kontakti</h3>
-        <a href="tel:+38349299766">+383 49 299 766</a>
-        <a href="https://www.instagram.com/autotransport.ez/" target="_blank" rel="noopener">@autotransport.ez</a>
-        <span>Mitrovicë, Kosovë</span>
-      </div>
-      <div>
-        <h3>Informacione</h3>
-        <a href="privacy.html">Politika e privatësisë</a>
-        <a href="terms.html">Kushtet e përdorimit</a>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>© <span id="year"></span> EZ Autotransport. Të gjitha të drejtat e rezervuara.</p>
-      <p>Çdo ofertë përcaktohet sipas lokacionit, veturës dhe destinacionit.</p>
+      <div class="footer-divider"></div>
+      <p class="copyright">© 2026 Rent A Car 007. Të gjitha të drejtat e rezervuara.</p>
     </div>
   </footer>
-  <div class="floating-actions" aria-label="Veprime të shpejta">
-    <a class="floating-action floating-phone" href="tel:+38349299766" aria-label="Telefono EZ Autotransport">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.3 3.5 9.8 8l-2 1.7c1 2.2 2.8 4 5 5l1.8-2 4.4 2.5-.8 3.4c-.2.8-.9 1.4-1.7 1.4C9.6 20 4 14.4 4 7.5c0-.8.6-1.5 1.4-1.7l1.9-.3Z"/></svg>
-    </a>
-    <a class="floating-action floating-whatsapp" href="https://wa.me/38349299766" target="_blank" rel="noopener" aria-label="Na shkruaj në WhatsApp">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Zm-4.2 2.4c-.2-.1-1.2-.6-1.4-.7-.2-.1-.4-.1-.5.1l-.7.8c-.1.2-.3.2-.5.1-1.3-.6-2.3-1.5-3-2.7-.1-.2 0-.4.1-.5l.5-.6c.1-.2.2-.4.1-.6l-.6-1.5c-.1-.3-.3-.3-.5-.3h-.4c-.2 0-.5.1-.7.3-.7.7-1 1.5-1 2.5 0 1.5 1.1 3.1 1.3 3.3.2.2 2.2 3.4 5.4 4.6.8.3 1.4.5 1.9.6.8.2 1.5.2 2.1.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.2-.8-.4Z"/></svg>
-    </a>
+
+  <div class="modal-backdrop" id="vehicleModal" hidden>
+    <div class="vehicle-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Mbyll detajet">×</button>
+      <div class="modal-image-wrap">
+        <img id="modalImage" src="assets/images/volkswagen-golf-7.webp" width="720" height="405" alt="">
+        <div class="modal-image-gradient" aria-hidden="true"></div>
+        <div class="modal-image-text">
+          <span class="vehicle-tag" id="modalTag">Vetura 1</span>
+          <h2 id="modalTitle">Volkswagen Golf 7</h2>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p id="modalDescription"></p>
+        <dl class="modal-specs">
+          <div><dt>Viti i prodhimit</dt><dd id="modalYear"></dd></div>
+          <div><dt>Transmisioni</dt><dd id="modalTransmission"></dd></div>
+          <div><dt>Karburanti</dt><dd id="modalFuel"></dd></div>
+          <div><dt>Numri i ulëseve</dt><dd id="modalSeats"></dd></div>
+        </dl>
+        <div class="price-notice">
+          <span aria-hidden="true">!</span>
+          <p>Çmimet tona janë të negociueshme dhe varen nga kohëzgjatja e qirasë. Ju lutem na kontaktoni për një ofertë të personalizuar.</p>
+        </div>
+        <div class="modal-actions">
+          <button class="button button-light" id="modalFormButton" type="button">Rezervo me formë</button>
+          <a class="button button-primary" id="modalWhatsappButton" href="https://wa.me/38344181803" target="_blank" rel="noopener">Qira në WhatsApp</a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Pamje e zmadhuar">
-    <button class="lightbox-close" type="button" aria-label="Mbyll fotografinë">×</button>
-    <img src="" alt="">
-  </div>
-
-  <script src="assets/js/app-v4.js"></script>
+  <script src="js/script.js?v=20260714-2" defer></script>
 </body>
 </html>
